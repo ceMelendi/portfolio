@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celia Melendi</title>
+        <meta name="title" content="Celia Melendi">
+        <meta name="description" content="This is my artist portfolio, made from codewithsadee's template.">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/language_toggle_style.css">
+        <link rel="stylesheet" href="./css/gallery.css">
+
+        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous"></script>
+        <script src="./js/jquery.i18n.properties.js"></script>
+
+    </head>
+
+    <body>
+
+        
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a><li>
+                    <li><a href="">Gallery</a><li>
+                    <li><a href="">About</a><li>
+                </ul>
+
+                
+            </nav>
+
+            <section>
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" >
+                <label for="language-toggle" data-active="false" onclick="localization.updateLang()"></label>
+                <span class="on">ES</span>
+                <span class="off">EN</span>
+            </section>
+            
+        </header>
+
+        <main>
+
+            <article>
+
+                <section>
+                    <h1>Celia Melendi</h1>
+
+                    <p>Software Engineer and Artist</p>
+                </section>
+
+                <section>
+                    <h2>Gallery</h2>
+
+                    <ul>
+                        <li data-reveal>
+                            <figure>
+                                <img src="./images/1.jpg" alt="The First">
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li data-reveal>
+                            <figure>
+                                <img src="./images/2.jpg" alt="The Second">
+                            </figure>
+                        </li>
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+        </main>
+
+        
+        <script src="js/localization.js"></script>
+        
+    </body>
+</html>

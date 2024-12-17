@@ -1,0 +1,119 @@
+:root {
+
+    --color_on: hsl(0, 0%, 100%);
+    --color_off: hsl(346, 100%, 58%);
+
+    /**
+   * shadow
+   */
+
+  --shadow: 0 12px 30px -10px hsla(0, 0%, 14%, 0.1);
+
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+header section{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  header section > span {
+    position: absolute;
+    top: 5%;
+    pointer-events: none;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+    width: 50%;
+    text-align: center;
+  }
+  
+  input.check-toggle-round-flat:checked ~ .off {
+    color: var(--color_off);
+  }
+  
+  input.check-toggle-round-flat:checked ~ .on {
+    color: var(--color_on);
+  }
+  
+  header section > span.off {
+    right: 0;
+    padding-right: 4px;
+    color: var(--color_on);
+  }
+  
+  header section > span.on {
+    left: 0;
+    padding-left: 2px;
+    color: var(--color_off);
+  }
+  
+  .check-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+  
+  .check-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  input.check-toggle-round-flat + label {
+    padding: 2px;
+    width: 97px;
+    height: 35px;
+    background-color: var(--color_off);
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+  }
+  input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+  }
+  
+  input.check-toggle-round-flat + label:before {
+    
+    background-color: var(--color_off);
+    -webkit-border-radius: 60px;    
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+  }
+  input.check-toggle-round-flat + label:after {
+    top: 4px;
+    bottom: 4px;
+    width: 48px;
+    background-color: var(--color_on);
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+    border-radius: 52px;
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+  }
+  
+  input.check-toggle-round-flat:checked + label {
+  }
+  
+  input.check-toggle-round-flat:checked + label:after {
+    margin-left: 44px;
+  }
