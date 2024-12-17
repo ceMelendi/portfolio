@@ -1,0 +1,43 @@
+body > section {
+    text-align: center;
+}
+
+body > section section {
+    position: relative;
+    text-align: left;
+    height: 1.2em;
+}
+
+body > section section p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+body > section section p :is(.in .out){
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+body > section section p.active .out {
+    opacity: 1;
+    transition: scaleY(1);
+    animation: textWave 0.2s ease forwards;
+}
+
+body > section section p .in {
+    animation: textWave 0.2s ease forwards;
+}
+
+@keyframes textWave {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
